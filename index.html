@@ -180,3 +180,60 @@ footer p a,footer p a:hover,footer p a:focus {
       </style>
   
   </head>
+  <body ng-app="">
+      
+      <div class="login-title">
+        <h1 id="login-h1">&nbsp;&nbsp;&nbsp;ConnecTex Login</h1>
+        <span style="font-size: 12px;"></span>
+      </div>
+      
+        <center>
+            
+        <div id="div_1" class="container">
+            <form role="form" action="module1/php/php_login.php" method="post" style="">
+                <h1 class="title">&nbsp;&nbsp;&nbsp;Login</h1>
+                
+                <div class="form-group">
+                    <label for="email">Mobile Number</label>
+                    <input type="number" class="form-control" style="width:300px;" id="email" name="mobile" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="pwd">Password</label>
+                    <input type="password" class="form-control" style="width:300px;" id="pwd" name="password" required>
+                </div>
+                
+                <input type="submit" class="btn btn-default" value="Login" id="loginbtn">
+                
+                <div class="footer">
+                    <a href="forgotPassword.html" class="fpass" style="text-decoration: none;">Forgot your password?
+                    </a>
+                </div>
+            </form>
+            
+            |----------------------------- OR -----------------------------|<br><br>
+            <form action="module1/signup.html" role="form" method="post">
+                
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default" value="Signup">
+                </div>
+                
+            </form>
+            </div>
+
+        </center><br><br>
+      <footer>
+            <div class="container">
+                <div class="col-md-12">
+                    <a href="#page-top" class="page-scroll"><img src="images/cx_logo.png" alt="ConnecTex"/></a>
+                    <div class="space50"></div>
+                    <ul  class="clearlist socialList" style="margin-left:-20px;">
+                        <li><a target="_blank" href="https://www.facebook.com/ConnecTex-417688075097280/?fref=ts" class="btn btn-block btn-social btn-facebook"><i class="fa fa-facebook"></i><span class="hidden-xs"> Facebook </span></a></li>
+                        <li><a href="#" class="btn btn-block btn-social btn-twitter"><i class="fa fa-twitter"></i><span class="hidden-xs">Twitter</span></a></li>
+                        <li><a target="_blank" href="https://www.linkedin.com/company/6646122?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A6646122%2Cidx%3A2-1-2%2CtarId%3A1450030264419%2Ctas%3Aconnectex%20" class="btn btn-block btn-social btn-linkedin"><i class="fa fa-linkedin"></i><span class="hidden-xs">Linkedin</span></a></li>
+                    </ul>
+                    <hr>
+                    <p style="margin-left:45px;">&copy; ConnecTex Developed by <a target="_blank" title="Tarang Dave" href="https://github.com/tarangdave" >Tarang Dave</a></p>
+                </div><!-- col-md-12 end -->
+            </div><!-- container end -->
+        </footer>
