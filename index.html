@@ -237,3 +237,20 @@ footer p a,footer p a:hover,footer p a:focus {
                 </div><!-- col-md-12 end -->
             </div><!-- container end -->
         </footer>
+        <script>
+          $(document).ready(function() {
+              $("#email").bind('keyup',function() {
+                  if($("#email").val().length == 10){
+                      $('#loginbtn').prop('disabled',false);
+                  }
+                  else{
+                      $('#loginbtn').prop('disabled',true);
+                  }
+              });
+          });
+      </script>
+
+
+  </body>
+
+</html>
