@@ -1,0 +1,213 @@
+<html ng-app="myApp">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <head>
+      <title>ConnecTex | Signup</title>
+        <script src="//assets.codepen.io/assets/common/stopExecutionOnTimeout-f961f59a28ef4fd551736b43f94620b5.js"></script>
+<link rel="icon" href="../images/favicon.ico">
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js'></script>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+       <script>
+  window.console = window.console || function(t) {};
+</script>
+      <style>
+      footer {
+    background:#29282b;
+    text-align: center;
+    padding: 150px 0px;
+}
+footer hr{
+    border-color: #181819;
+}
+footer p{
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #fff;
+}
+footer p a,footer p a:hover,footer p a:focus {
+    color: #fff;
+}
+.socialList li{
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.socialList li a{
+    display: inline-block;
+    color: #fff;
+    margin: 0px 20px;
+}
+.socialList li a span{
+    margin-left: 10px;
+}
+.socialList li a:hover{
+    color: #F44C67;
+}
+            .space50 {
+    margin-bottom: 50px;
+}
+          body{
+              background: #e9e9e9;
+              color: #666666;
+              font-family: 'RobotoDraft', 'Roboto', sans-serif;
+              font-size: 14px;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+          }
+          .login-title{
+              padding: 50px 0;
+              letter-spacing: 2px;
+          }
+          #title_h1{
+              margin: 0 0 20px;
+              font-size: 48px;
+              font-weight: 300;
+              border-left: 5px solid #ed2553;
+          }
+          #div_1{
+              margin-top:5px;
+              position: relative;
+              background: #ffffff;
+              width:450px;
+              border-radius: 5px;
+              padding: 60px 0px 40px 0;
+              box-sizing: border-box;
+              box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          }
+          .title{
+              position: relative;
+              z-index: 1;
+              text-align:left;
+              border-left: 5px solid #ed2553;
+              margin: 0 0 35px;
+              padding: 10px 0 10px 20px;
+              color: #ed2553;
+              font-size: 32px;
+              font-weight: 600;
+              text-transform: uppercase;
+          }
+          
+</style>
+  </head>
+  <body ng-app="myApp">
+      <div class="login-title">
+          <h1 id="title_h1">&nbsp;&nbsp;&nbsp;ConnecTex Signup</h1>
+          <span style="font-size: 12px;"></span>
+      </div>
+
+    <center>
+        <div id="div_1" class="container" ng-controller='Ctrl'>
+            <form role="form" action="php/php_next1.php" method="post" name="form">
+                <h1 class="title">&nbsp;&nbsp;&nbsp;Personal Info.</h1>
+                
+                <div class="form-group">
+                    <label for="email">Your Name</label>
+                    <input type="text" class="form-control" style="width:300px;" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="pwd">Enter Email(optional)</label>
+                    <input type="email" class="form-control" style="width:300px;" id="email" name="email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="pw1">Password</label>
+                    <input data-ng-model='user.password' type="password" name='password' placeholder='Password' class="form-control" style="width:300px;" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="pw2">Re-Type Password</label>
+                    <input ng-model='user.password_verify' type="password" name='confirm_password' placeholder='Confirm Password' required data-password-verify="user.password" class="form-control" style="width:300px;">
+                </div>
+                
+                <div ng-show="form.confirm_password.$error.passwordVerify" style="color:red;">
+            Passwords Don't Match!
+                </div>
+                
+                <div class="form-group">
+                    <label for="regas">Register as</label>
+                    <input type="radio" style="width:50px;" id="regas" name="regas" value="1" required>Weaver
+                    <input type="radio" style="width:50px;" id="regas" name="regas" value="2" required>Wholesaler
+                </div>
+                
+                <div class="form-group">
+                    <label for="newsletter">Newsletter</label>
+                    <input type="checkbox" style="width:50px;" id="newsletter" name="news">
+                </div>
+
+                <input type="submit" class="btn btn-default" value="Next" name="submit">
+            </form>
+        </div>
+      </center><br><br><br><br>
+      
+<footer>
+            <div class="container">
+                <div class="col-md-12">
+                    <a href="#page-top" class="page-scroll"><img src="../images/cx_logo.png" alt="ConnecTex"/></a>
+                    <div class="space50"></div>
+                    <ul  class="clearlist socialList" style="margin-left:-20px;">
+                        <li><a target="_blank" href="https://www.facebook.com/ConnecTex-417688075097280/?fref=ts"><i class="fa fa-facebook"></i><span class="hidden-xs"> Facebook </span></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i><span class="hidden-xs">Twitter</span></a></li>
+                        <li><a target="_blank" href="https://www.linkedin.com/company/6646122?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A6646122%2Cidx%3A2-1-2%2CtarId%3A1450030264419%2Ctas%3Aconnectex%20"><i class="fa fa-linkedin"></i><span class="hidden-xs">Linkedin</span></a></li>
+                    </ul>
+                    <hr>
+                    <p style="margin-left:45px;">&copy; ConnecTex Developed by <a target="_blank" title="Tarang Dave" href="https://github.com/tarangdave">Tarang Dave</a></p>
+                </div><!-- col-md-12 end -->
+            </div><!-- container end -->
+        </footer>
+        <script>
+         $('#newsletter').change(function(){
+             if(this.checked){
+                $('#email').prop('required',true);
+         }
+                                 else{
+                                 $('#email').prop('required',false);
+            }
+            });
+          var app = angular.module('myApp', []);
+
+app.directive("passwordVerify", function() {
+    return {
+        require: "ngModel",
+        scope: {
+            passwordVerify: '='
+        },
+        link: function(scope, element, attrs, ctrl) {
+            scope.$watch(function() {
+                var combined;
+                
+                if (scope.passwordVerify || ctrl.$viewValue) {
+                   combined = scope.passwordVerify + '_' + ctrl.$viewValue; 
+                }                    
+                return combined;
+            }, function(value) {
+                if (value) {
+                    ctrl.$parsers.unshift(function(viewValue) {
+                        var origin = scope.passwordVerify;
+                        if (origin !== viewValue) {
+                            ctrl.$setValidity("passwordVerify", false);
+                            $("input[type=submit]").prop("disabled", true);
+                            return undefined;
+                        } else {
+                            ctrl.$setValidity("passwordVerify", true);
+                            $("input[type=submit]").prop("disabled", false);
+                            return viewValue;
+                        }
+                    });
+                }
+            });
+        }
+    };
+});
+
+function Ctrl($scope) {}
+</script>
+
+  </body>
+  </html>
